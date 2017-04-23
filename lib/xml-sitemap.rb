@@ -1,7 +1,7 @@
 require 'time'
 require 'date'
 require 'zlib'
-require 'builder'
+# require 'builder'
 require 'cgi'
 begin
   require 'nokogiri'
@@ -23,15 +23,15 @@ module XmlSitemap
     # options - Map options
     #
     def map(domain, options={})
-      XmlSitemap::Map.new(domain, options) 
+      XmlSitemap::Map.new(domain, options)
     end
-    
+
     alias :new :map
-    
+
     # Shortcut to XmlSitemap::Index.new
     #
     # options - Index options
-    # 
+    #
     def index(options={})
       XmlSitemap::Index.new(options)
     end
